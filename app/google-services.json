@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "632101958707",
+    "project_id": "mascotas-5ffa4",
+    "storage_bucket": "mascotas-5ffa4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632101958707:android:d045ad2c1741389e82df46",
+        "android_client_info": {
+          "package_name": "edu.unicauca.aplimovil.masccotas_v1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAeUVH29daoI8QXZ5Mqy_km3HLHctr-PA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
