@@ -9,6 +9,8 @@ import edu.unicauca.aplimovil.masccotas_v1.Login.LoginScreen
 import edu.unicauca.aplimovil.masccotas_v1.Registro.RegisterScreen
 import edu.unicauca.aplimovil.masccotas_v1.Registro.RegisterViewModel
 import androidx.compose.ui.Modifier
+import edu.unicauca.aplimovil.masccotas_v1.Direccion.AgregarDireccionScreen
+import edu.unicauca.aplimovil.masccotas_v1.Home.HomeScreen
 
 @Composable
 fun AppNavGraph(navController: NavHostController) {
@@ -26,6 +28,12 @@ fun AppNavGraph(navController: NavHostController) {
                 modifier = Modifier,
                 viewModel = registerViewModel
             )
+        }
+        composable("home") {
+            HomeScreen(navController)
+        }
+        composable("agregar_direccion") {
+            AgregarDireccionScreen(navController)
         }
     }
 }
