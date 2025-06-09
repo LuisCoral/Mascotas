@@ -12,11 +12,13 @@ import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
+
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import edu.unicauca.aplimovil.masccotas_v1.SeccionUsuario.UserSection
+import edu.unicauca.aplimovil.masccotas_v1.SolitudPaseo.SearchSection
 
 @Composable
 fun HomeScreen(navController: NavController) {
@@ -110,22 +112,22 @@ fun RecommendationsSection(navController: NavController) {
     }
 }
 
-@Composable
-fun SearchSection() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text("Pantalla de búsqueda (¡personalízala como prefieras!)")
-    }
-}
+//@Composable
+//fun SearchSection() {
+//    Box(
+//        modifier = Modifier.fillMaxSize(),
+//        contentAlignment = Alignment.Center
+//    ) {
+//        Text("Pantalla de búsqueda (¡personalízala como prefieras!)")
+//    }
+//}
 
-@Composable
-fun UserSection() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text("Información del usuario (aquí puedes mostrar datos del perfil)")
-    }
-}
+//@Composable
+//fun UserSection() {
+//    Box(
+//        modifier = Modifier.fillMaxSize(),
+//        contentAlignment = Alignment.Center
+//    ) {
+//        Text("Información del usuario (aquí puedes mostrar datos del perfil)")
+//    }
+//}
