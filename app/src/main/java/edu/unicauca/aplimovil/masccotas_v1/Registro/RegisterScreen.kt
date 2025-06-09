@@ -1,23 +1,29 @@
 package edu.unicauca.aplimovil.masccotas_v1.Registro
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
+import edu.unicauca.aplimovil.masccotas_v1.R
+import androidx.compose.foundation.Image
 
-
+//Hasta aqui
 //Original
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RegisterScreen(
-    navController: NavHostController,
+    navController: NavController,
     modifier: Modifier = Modifier,
     viewModel: RegisterViewModel
 ) {
@@ -32,9 +38,6 @@ fun RegisterScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val coroutineScope = rememberCoroutineScope()
 
-    // ViewModel
-    //val viewModel: RegisterViewModel = viewModel()
-
     Scaffold(
         snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
     ) { paddingValues ->
@@ -43,26 +46,34 @@ fun RegisterScreen(
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-//            // Botón de regreso
-//            bottonRedondoStateless(
-//                onClick = { navController.popBackStack() },
-//                icon = Icons.Default.ArrowBack,
-//                colors = MaterialTheme.colorScheme.tertiary,
-//                modifier = Modifier
-//                    .align(Alignment.TopStart)
-//                    .padding(16.dp)
-//                    .size(width = 40.dp, height = 40.dp)
-//            )
+            // Botón de regreso
+            IconButton(
+                onClick = { navController.popBackStack() },
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(16.dp)
+            ) {
+                Icon(
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = "Regresar"
+                )
+            }
 
-            // Formulario de registro
+            // Formulario de registro y logo
             Column(
                 modifier = Modifier
                     .align(Alignment.Center)
-                    .padding(16.dp)
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-//                Spacer(modifier = Modifier.height(16.dp))
-//                Box(modifier = Modifier.align(Alignment.CenterHorizontally)) { Imagenes(R.drawable.logo, 100) }
-//                Spacer(modifier = Modifier.height(8.dp))
+                // Imagen en la parte superior
+                Image(
+                    painter = painterResource(id = R.drawable.icono),
+                    contentDescription = "Icono de la app",
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(bottom = 16.dp)
+                )
 
                 TextField(
                     value = nombre.value,

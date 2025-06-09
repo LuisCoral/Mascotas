@@ -16,12 +16,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val navController = rememberNavController()
-            val registerViewModel: RegisterViewModel = viewModel()
-
             MaterialTheme {
-                Surface(modifier = Modifier.fillMaxSize()) {
-                    AppNavigation(navController, registerViewModel)
+                Surface {
+                    val navController = rememberNavController()
+                    AppNavGraph(navController = navController)
                 }
             }
         }
