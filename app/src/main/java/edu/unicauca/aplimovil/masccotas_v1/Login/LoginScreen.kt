@@ -1,6 +1,6 @@
 package edu.unicauca.aplimovil.masccotas_v1.Login
 
-import ads_mobile_sdk.h5
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import edu.unicauca.aplimovil.masccotas_v1.R
 import androidx.compose.foundation.Image
-import androidx.compose.ui.res.painterResource
+
 
 @Composable
 fun LoginScreen(navController: NavController) {
