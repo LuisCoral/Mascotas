@@ -149,7 +149,7 @@ fun RegisterScreen(
                                             duration = SnackbarDuration.Short
                                         )
                                         delay(1000)
-                                        navController.navigate("pantalla_destino") // Cambia "pantalla_destino" por tu pantalla de destino
+                                        navController.navigate("register") // Cambia "pantalla_destino" por tu pantalla de destino
                                     }
                                 },
                                 onError = { error ->
